@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTT Originals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <style>
+
+        
+        @import url('https://fonts.googleapis.com/css2?family=REM:wght@600&family=Roboto&family=Roboto+Slab:wght@500&display=swap');
+
+       
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=REM:wght@600&family=Roboto&family=Roboto+Slab:wght@500&family=Signika+Negative:wght@700&family=Tektur:wght@800&display=swap');
+        body{
+          background-color: black;
+        }
+        nav{
+            height: 120px;
+            width: 100%;
+            background-color:black;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+        .nav_logo img{
+            height: 110px;
+            width: 115px;
+            margin-top: 10px;
+            margin-left: 20px;
+
+        }
+        .nav_items{
+            position: absolute;
+            right: 20px;
+            
+            
+        }
+        .nav_items a{
+            font-size: 19px;
+            padding: 10px;
+            text-decoration: none;
+            font-family: 'Roboto Slab', serif;
+            color: rgb(197, 187, 99);
+            font-weight: 900;
+            
+        }
+        .nav_items:hover a{
+            filter: blur(2px);
+        }
+        .nav_items a:hover{
+            text-decoration: underline;
+            color: aliceblue;
+            filter: blur(0px);
+            text-shadow: 4px 3px 2px rgb(125, 129, 30);
+            
+            
+        }
+        .carousel-inner img{
+            width: 98%;
+            height: 555px;
+            margin: 11px 0px 0px 10px;
+            border: 2px aliceblue solid;
+        }
+        /* Frequently watched starts */
+        p{
+          font-size: 30px;
+          margin-left: 15px;
+          color: rgb(220, 187, 144);
+          text-decoration:underline;
+          font-family: 'Signika Negative', sans-serif;
+          text-shadow: 1px 1px 1px whitesmoke;  
+        }
+        .freq{
+          display: inline-block;
+          width: 98%;
+          margin-left: 5px;
+            
+        }
+        .freq img{
+          height: 400px;
+          width: 234px;
+          border: 2px aliceblue solid;
+          margin-left: 10px;
+          margin-bottom: 20px;
+        }
+        .rf{
+          height: 120px;
+        }
+        .freq img:hover{
+          transform: scale(1.2);
+          transition: all 0.5s ease-in-out;
+          box-shadow: 5px 5px 3px goldenrod;  
+        }
+        
+        #carouselExampleAutoplaying{
+          margin-top: 130px;
+
+        }
+        /* Frequently watched ends */
+
+        /* recently released starts */
+        .recent{
+          display: inline-block;
+          width: 98%;
+          margin-left: 5px;
+            
+        }
+        .recent img{
+          height: 370px;
+          width: 234px;
+          border: 2px aliceblue solid;
+          margin-left: 10px;
+          margin-bottom: 20px;
+        }
+        .recent img:hover{
+          transform: scale(1.2);
+          transition: all 0.5s ease-in-out;
+          box-shadow: 5px 5px 3px goldenrod;  
+        }
+        .recwat{
+          height: 120px;
+        }
+        /* Recently released ends */
+        /* top rated starts */
+        .top img{
+          height: 370px;
+          width: 234px;
+          border: 2px aliceblue solid;
+          margin-left: 10px;
+          margin-bottom: 20px;
+        }
+        .top img:hover{
+          transform: scale(1.2);
+          transition: all 0.5s ease-in-out;
+          box-shadow: 5px 5px 3px goldenrod; 
+        }
+        .topr{
+          height: 120px;
+        }
+        /* top rated ends */
+        /* Favourites starts */
+        .fav img{
+          height: 370px;
+          width: 234px;
+          border: 2px aliceblue solid;
+          margin-left: 10px;
+          margin-bottom: 20px;
+        }
+        .fav img:hover{
+          transform: scale(1.2);
+          transition: all 0.5s ease-in-out;
+          box-shadow: 5px 5px 3px goldenrod; 
+        }
+        .favs{
+          height: 120px;
+        }
+        /* Favourites ends */
+        /* bottom part starts */
+        table{
+          width: 98%;
+          margin-left: 10px;
+      
+        }
+        th{
+          font-size: 25px;
+          color: whitesmoke;
+          font-weight: 400;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-weight: bold;
+        }
+        td a{
+          text-decoration: none;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: 18px;
+          color: rgb(16, 177, 177);
+        }
+        td a:hover{
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: 18px;
+          color: goldenrod;
+          text-shadow: 3px 3px 3px wheat;
+          transform: scale(1.2);
+        }
+        .tableimg img{
+          margin: 10px;
+          width: 40px;
+          height: 40px;   
+          border-radius: 50%;
+        }
+        .lp a{
+          position: inline;
+          margin-right: 10px;
+        }
+         /*Bottom part ends*/
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#carouselExampleAutoplaying"><img src="logo.png" alt=""></a>
+        </div>
+        <div class="nav_items">
+            <a href="#carouselExampleAutoplaying">Home</a>
+            <a href="#fr">Frequently Watched</a>
+            <a href="#rr">Recently Released</a>
+            <a href="#tr">Top Rated</a>
+            <a href="#fs">Favourites</a>
+            <a href="#abt">About</a>
+            <a href="index(b).html" target="_self">SignUp/SignIn</a>
+
+        </div>
+    </nav>
+    <!-- Home page starts -->
+    <div class="homp" id="carouselExampleAutoplaying"></div>
+    <div class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href=""><img src="img2.avif" class="d-block" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href=""><img src="home_image02.jpg" class="d-block" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href=""><img src="home_image03.jpg" class="d-block" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href=""><img src="home_image04.jpg" class="d-block" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href=""><img src="home_image05.jpg" class="d-block" alt="..."></a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div><br><br>
+    <!-- Home page ends -->
+    <!-- Frequently watched starts -->
+    <div class="rf" id="fr"></div>
+    <p>Frequently Watched</p>
+    <div class="freq">
+      <a href=""><img src="freq_img01.jpeg" alt=""></a>
+      <a href=""><img src="freq_img02.jpeg" alt=""></a>
+      <a href=""><img src="freq_img03.jpeg" alt=""></a>
+      <a href=""><img src="freq_img04.jpeg" alt=""></a>
+      <a href=""><img src="freq_img05.jpeg" alt=""></a>
+      <a href=""><img src="freq_img06.jpeg" alt=""></a>
+      <a href=""><img src="freq_img07.jpeg" alt=""></a>
+      <a href=""><img src="freq_img08.jpeg" alt=""></a>
+      <a href=""><img src="freq_img09.jpeg" alt=""></a>
+      <a href=""><img src="freq_img10.jpeg" alt=""></a>
+      <a href=""><img src="freq_img11.jpeg" alt=""></a>
+      <a href=""><img src="freq_img12.jpeg" alt=""></a>
+    </div><br><br>
+    <!-- Frequently watched ends -->
+
+    <!-- Recently released starts -->
+    <div class="recwat" id="rr"></div>
+    <p>Recently Released</p>
+    <div class="recent">
+      <a href=""><img src="rec_img01.jpeg" alt=""></a>
+      <a href=""><img src="rec_img02.jpeg" alt=""></a>
+      <a href=""><img src="rec_img03.jpeg" alt=""></a>
+      <a href=""><img src="rec_img04.jpeg" alt=""></a>
+      <a href=""><img src="rec_img05.jpeg" alt=""></a>
+      <a href=""><img src="rec_img06.jpeg" alt=""></a>
+      <a href=""><img src="rec_img07.jpeg" alt=""></a>
+      <a href=""><img src="rec_img08.jpeg" alt=""></a>
+      <a href=""><img src="rec_img09.jpeg" alt=""></a>
+      <a href=""><img src="rec_img10.jpeg" alt=""></a>
+      <a href=""><img src="rec_img11.jpeg" alt=""></a>
+      <a href=""><img src="rec_img12.jpeg" alt=""></a>
+    </div><br><br>
+
+    <!-- Top rated starts -->
+    <div class="topr" id="tr"></div>
+    <p>Top Rated</p>
+    <div class="top">
+      <a href=""><img src="top_img01.jpeg" alt=""></a>
+      <a href=""><img src="top_img02.jpeg" alt=""></a>
+      <a href=""><img src="top_img03.jpeg" alt=""></a>
+      <a href=""><img src="top_img04.jpeg" alt=""></a>
+      <a href=""><img src="top_img05.jpeg" alt=""></a>
+      <a href=""><img src="top_img06.jpeg" alt=""></a>
+      <a href=""><img src="top_img07.jpeg" alt=""></a>
+      <a href=""><img src="top_img08.jpeg" alt=""></a>
+      <a href=""><img src="top_img09.jpeg" alt=""></a>
+      <a href=""><img src="top_img10.jpeg" alt=""></a>
+      <a href=""><img src="top_img11.jpeg" alt=""></a>
+      <a href=""><img src="top_img12.jpeg" alt=""></a>
+    </div><br><br>
+    
+
+    <!-- Favourites starts -->
+    <div class="favs" id="fs"></div>
+    <p>Favourites</p>
+    <div class="fav">
+      <a href=""><img src="fav_01.jpeg" alt=""></a>
+      <a href=""><img src="fav_02.jpeg" alt=""></a>
+      <a href=""><img src="fav_03.jpeg" alt=""></a>
+      <a href=""><img src="fav_13.jpeg" alt=""></a>
+      <a href=""><img src="fav_05.jpeg" alt=""></a>
+      <a href=""><img src="fav_06.jpeg" alt=""></a>
+      <a href=""><img src="fav_07.jpeg" alt=""></a>
+      <a href=""><img src="fav_08.jpeg" alt=""></a>
+      <a href=""><img src="fav_09.jpeg" alt=""></a>
+      <a href=""><img src="fav_10.jpeg" alt=""></a>
+      <a href=""><img src="fav_11.jpeg" alt=""></a>
+      <a href=""><img src="fav_12.jpeg" alt=""></a>
+    </div><br><br><br><br>
+    <!-- end part starts -->
+    <div class="bottom_part" id="abt">
+      <table>
+        <tr>
+          <th>Company</th>
+          <th>View Website In</th>
+          <th>Need Help?</th>
+          <th>Connect With Us</th>
+        </tr>
+        <tr>
+          <td><a href="">Careers</a></td>
+          <td><a href="">✓ English</a></td>
+          <td><a href="">Visit Help Center</a></td>
+          <td><div class="tableimg">
+            <a href="https://facebook.com/login"><img src="C:\Users\91636\OneDrive\Pictures\virat kohli\fb.png" alt=""></a>
+            <a href="https://twitter.com/login"><img src="C:\Users\91636\OneDrive\Pictures\virat kohli\download.png" alt=""></a>
+            
+          </div></td>
+        </tr>
+        <tr>
+          <td><a href="about us.html" target="_blank">About Us</a></td>
+          <td></td>
+          <td><a href="">Share Feedback</a></td>
+          <td></td>
+        </tr></table><br>
+        <table><tr>
+          <td><a href="">&copy; 2023 OTT Originals. All Rights Reserved.</a></td>
+        </tr>
+        <tr>
+          <td><div class="lp">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy policy</a>
+            <a href="">FAQ</a>
+          </div></td>
+        </tr>    
+      </table>
+      
+
+      
+      
+
+    </div>
+
+</body>
+</html>
